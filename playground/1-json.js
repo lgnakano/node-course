@@ -5,7 +5,7 @@ const book = {
 }
 
 const bookJSON = JSON.stringify(book)
-console.log(bookJSON)
+fs.writeFileSync('1-json.json', bookJSON)
 
 const parseData = JSON.parse(bookJSON)
 console.log(parseData.author)
