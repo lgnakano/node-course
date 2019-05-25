@@ -26,6 +26,7 @@ const addNote = (title, body) => {
     }
     
     const duplicateNote = notes.find((note) => note.title === title)
+
     if (!duplicateNote) {
         notes.push(note)
         saveNotes(notes)
