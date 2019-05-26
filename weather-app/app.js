@@ -12,7 +12,8 @@ request({ url: url, json: true }, (error, response) => {
 const geocodeURL = 'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=pk.eyJ1IjoibGduYWthbm8iLCJhIjoiY2p1NGZkbjF5MHhnODQ0b2JreGE1b3d0YSJ9.w7JC7gDqQcVNQ0zo-E8AyA&limit=1'
 
 request({ url: geocodeURL, json: true }, (error, response) => {
-    const latitude = response.body.features[0].center[0]
-    const longitude = response.body.features[0].center[1]
+    const longitude = response.body.features[0].center[0]    
+    const latitude = response.body.features[0].center[1]
+
     console.log(latitude, longitude)
 })
