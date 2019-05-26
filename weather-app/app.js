@@ -1,7 +1,12 @@
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
-geocode("Tampa",(error, data) => {
+const location = process.argv[2]
+
+if (!location) {
+    return console.log('Must provide location')
+}
+geocode(location,(error, data) => {
     if(error) {
         return console.log(error)
     }
@@ -15,4 +20,5 @@ geocode("Tampa",(error, data) => {
         console.log(forecastData)
     })
 })
+
 
